@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class KdvHesapla {
+    public static void main(String[] args){
+        double fiyat;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Fiyat Giriniz : ");
+        fiyat = input.nextDouble();
+        System.out.println("KDV'siz Fiyatınız : " + fiyat);
+        boolean oran = fiyat > 1000;
+        System.out.println(oran ? "KDV Oranınız : " + 0.08 : "KDV Oranınız : " + 0.18);
+        boolean tutar = fiyat > 1000;
+        System.out.println(tutar ? "KDV Tutarınız : " + fiyat*0.08 : "KDV Tutarınız : " + fiyat*0.18);
+        boolean sonuc = fiyat > 1000;
+        System.out.println(sonuc ? "KDV'li Fiyatınız : " + (fiyat + fiyat*0.08) : "KDV'li Fiyatınız : " + (fiyat + fiyat*0.18));
+    }
+}
